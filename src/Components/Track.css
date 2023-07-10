@@ -1,0 +1,87 @@
+.album-card {
+  padding: .3rem .5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  transition: .4s;
+  border-radius: .5rem;
+}
+
+.album-card:hover, .album-card:active {
+  background:rgba(210, 43, 252, 0.226);
+}
+
+.album-pic {
+  width: 3.5rem;
+  height: 3.5rem;
+  /*border: solid red 1px;*/
+  border-radius: .25rem;
+  margin: 0.2rem 0;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.album-pic img {
+  width: 100%;
+  height: 100%;
+}
+
+.album-det {
+  margin-left: .3rem;
+  margin-right: .3rem;
+  text-align: left;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  align-content: space-between;
+  display: block;
+  justify-content: space-between;
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1;
+}
+
+.album-det p {
+  margin: .5rem;
+}
+
+.song-title {
+  font-weight: bold;
+}
+
+.action-container {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.track-action {
+  display:block;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-weight: 600;
+  color:rgb(34, 34, 34);
+  background-color: rgba(255, 192, 203, 0);
+  transition: .25s;
+  border: solid red 1px;
+  line-height: 0;
+  color: black;
+  border: none;
+  background: none;
+  }
