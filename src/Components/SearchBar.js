@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './SearchBar.css';
 
-function SearchBar() {
+function SearchBar(props) {
+  const [term, setTerm] = useState('');
+
+  const handleTermChange = (e) => {
+    setTerm(e.target.value);
+  }
+
+  useEffect(() => {
+    setTerm(term);
+  }, [term]);
+
   return (
     <div className='search-container'>
-      <form>
-        
-        <input type="search" name="search" placeholder='Search Musics Here' required/>
+        <input 
+          type="search" 
+          placeholder='Search Musics Here'
+          value={props.term} 
+          onChange={props.onSearch}
+          required />
         <button type="submit">
           <span>Search</span>
         </button>
-      </form>
     </div>
   );
 }

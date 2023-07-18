@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Track from './Track';
-import {sampleResult} from '../sample/sampleResult.js';
+import './TrackList.css';
 
 function TrackList(props) {
+  const { tracks } = props;
+
   return (
     <div className="TrackList">
-      {props.tracks.map((track) => {
+      {tracks.map((track) => {
         return (
           <Track
             track={track}

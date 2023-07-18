@@ -44,7 +44,7 @@ function Track(props) {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           style={buttonStyle("rgb(219, 18, 58)")}>
-          -
+          –
         </button>
       );
     }

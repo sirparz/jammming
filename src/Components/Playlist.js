@@ -1,4 +1,22 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import TrackList from './TrackList';
+
+function Playlist(props) {
+  return (
+    <div className="Playlist">
+      <input onChange={props.onNameChange} value={props.playlistName} />
+      <TrackList
+        tracks={props.playlistTracks}
+        isRemoval={true}
+        onRemove={props.onRemove} />
+      <button className="Playlist-save" onClick={props.onSave}>
+        SAVE TO SPOTIFY
+      </button>
+    </div>
+  );
+}
+
+export default Playlist;
 
 /*
 function Playlist(props) {
@@ -10,7 +28,7 @@ function Playlist(props) {
     setPlaylist(tracksObject);
   }, [tracksObject]);
 
-  const handlePlaylistNameChange = (e) => {
+  const handleNameChange = (e) => {
     setPlaylistName(e.target.value);
   };
 
@@ -28,7 +46,7 @@ function Playlist(props) {
   
     return (
       <div>
-        <input id='playlist-name' value={playlistName} onChange={handlePlaylistNameChange} />
+        <input id='playlist-name' value={playlistName} onChange={handleNameChange} />
         {tracks}
         <button type='submit'>Save Playlist</button>
       </div>
