@@ -16,6 +16,7 @@ function UserDetail(props) {
       </div>
       <div className='User-name'>
         <h3>{props.user.display_name}</h3>
+        <p>{props.user.id}</p>
       </div>
       
     </>
