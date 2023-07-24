@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/sirparz.github.io/jammming/static/css/main.24521b35.css",
+    "main.js": "/sirparz.github.io/jammming/static/js/main.7e07e785.js",
+    "static/js/787.62d5a415.chunk.js": "/sirparz.github.io/jammming/static/js/787.62d5a415.chunk.js",
+    "static/media/background_photo_desktop.jpg": "/sirparz.github.io/jammming/static/media/background_photo_desktop.a0687f3fe6f1303a2d18.jpg",
+    "static/media/no-album.jpg": "/sirparz.github.io/jammming/static/media/no-album.263c936eeeadcc497a88.jpg",
+    "index.html": "/sirparz.github.io/jammming/index.html",
+    "main.24521b35.css.map": "/sirparz.github.io/jammming/static/css/main.24521b35.css.map",
+    "main.7e07e785.js.map": "/sirparz.github.io/jammming/static/js/main.7e07e785.js.map",
+    "787.62d5a415.chunk.js.map": "/sirparz.github.io/jammming/static/js/787.62d5a415.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24521b35.css",
+    "static/js/main.7e07e785.js"
+  ]
+}
