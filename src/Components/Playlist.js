@@ -1,17 +1,26 @@
 import React, { useCallback } from 'react';
 import TrackList from './TrackList';
+import './Playlist.css';
 
 function Playlist(props) {
   return (
     <div className="Playlist">
-      <input onChange={props.onNameChange} value={props.playlistName} />
-      <TrackList
-        tracks={props.playlistTracks}
-        isRemoval={true}
-        onRemove={props.onRemove} />
-      <button className="Playlist-save" onClick={props.onSave}>
-        SAVE TO SPOTIFY
-      </button>
+      <div className="Playlist-name">
+        <input onChange={props.onNameChange} value={props.playlistName} />
+      </div>
+      <div className="Track-thingy">
+        <TrackList
+          tracks={props.playlistTracks}
+          isRemoval={true}
+          onRemove={props.onRemove}
+          className="TrackList" />
+      </div>
+      <div className="Save-it">
+        <button className="Playlist-save" onClick={props.onSave}>
+          SAVE TO SPOTIFY
+        </button>
+      </div>
+      
     </div>
   );
 }

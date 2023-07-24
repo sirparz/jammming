@@ -15,7 +15,7 @@ function Track(props) {
   };
 
   const buttonStyle = (hoverColor) => {return {
-    color: isHover ? hoverColor : 'black',
+    color: isHover ? hoverColor : 'white',
     cursor: 'pointer',
   }};
 
@@ -67,11 +67,14 @@ function Track(props) {
   
   return (
     <div className='album-card'>
+      <a href={track.uri}>
       <img 
         className='album-pic' 
         src={track.albumImg ? track.albumImg : DefaultAlbum} 
         alt={track.albumName ? track.albumName : 'Unknown Album'}
       />
+      </a>
+      
       <div className='album-det'>
         <div className='song-title'>
           <p style={{fontWeight: 'bold'}}>{track.title ? track.title : 'Untitled'}</p>

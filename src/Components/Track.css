@@ -8,6 +8,7 @@
   align-content: stretch;
   transition: .4s;
   border-radius: .5rem;
+  border-bottom: 1px solid rgba(256, 256, 256, 0.8);
 }
 
 .album-card:hover, .album-card:active {
@@ -55,7 +56,7 @@
 }
 
 .song-title {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .action-container {
@@ -76,12 +77,11 @@
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   font-weight: 600;
-  color:rgb(34, 34, 34);
-  background-color: rgba(255, 192, 203, 0);
+  background-color: rgba(255, 255, 255, 0);
   transition: .25s;
   border: solid red 1px;
   line-height: 0;
-  color: black;
+  color: rgb(255, 255, 255);
   border: none;
   background: none;
   }

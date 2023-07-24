@@ -1,6 +1,6 @@
 import React from 'react';
 import TrackList from './TrackList';
-//import './SearchBar.css';
+import './SearchResult.css';
 
 function SearchResults(props) {
   

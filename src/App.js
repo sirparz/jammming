@@ -35,10 +35,26 @@ function App() {
     setPlaylistTracks((prevTracks) => [...prevTracks, addedTrack]);
   }
 
-  const handleSearch = (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    console.log(term);
     Spotify.search(term).then(setSearchResults);
+  }, [term]);
+
+  const handleTermChange = (e) => {
     setTerm(e.target.value);
+    console.log(term)
+  };
+
+  const searchThatShit = () => { // not used
+    Spotify.search(term).then(setSearchResults);
+  }
+
+  const savePlaylist = () => {
+    const trackUris = playlistTracks.map((track) => track.uri);
+    Spotify.savePlaylist(playlistName, trackUris).then(() => {
+      setPlaylistName("New Playlist");
+      setPlaylistTracks([]);
+    });
   };
 
 
@@ -59,21 +75,22 @@ function App() {
 
       <SearchBar 
         term={term}
-        onSearch={handleSearch} />
+        onSearch={handleTermChange} />
       {/*<TrackList tracks={sampleResult} />*/}
-      <SearchResults 
-        searchResults={searchResults}
-        onAdd={(e) => handleAddTrack(e, playlistTracks.id)} />
-      <Playlist 
-        playlistTracks={playlistTracks}
-        playlistName={playlistName}
-        onNameChange={handlePlaylistNameChange}
-        onRemove={(e) => handleRemoveTrack(e, playlistTracks.id)} />
+      <div className='Real-thing'>
+        <SearchResults 
+          searchResults={searchResults}
+          onAdd={(e) => handleAddTrack(e, playlistTracks.id)} />
+        <Playlist 
+          playlistTracks={playlistTracks}
+          playlistName={playlistName}
+          onNameChange={handlePlaylistNameChange}
+          onRemove={(e) => handleRemoveTrack(e, playlistTracks.id)}
+          onSave={savePlaylist} />
+      </div>
+      
     </>
   );
-
-  /*const shit = Spotify.search('dewa 19');
-  console.log(shit);*/
   
   return (
     <div className="App">

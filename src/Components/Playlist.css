@@ -1,0 +1,66 @@
+.Playlist {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  width: 37%;
+  max-height: 950px;
+  padding: 2.07rem 1.12rem;
+  background-color: rgba(1, 12, 63, 0.7);
+  box-shadow: 0 4px 2px 2px #000000;
+}
+
+.Playlist-name {
+  padding: .5rem 0;
+}
+
+.Playlist input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #6f6f6f;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.55rem;
+  color: #ffffff; /*make it white afterward*/
+}
+
+
+.Save-it {
+  padding: .5rem 0;
+}
+
+.Playlist-save {
+  font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  cursor: pointer;
+  width: 10rem;
+  padding: .77rem 0;
+  border-radius: 54px;
+  border-width: 0px;
+  margin-top: 1.27rem;
+  background-color: #6c41ec;
+  text-align: center;
+  font-size: .83rem;
+  transition: background-color .25s;
+  color: #fff;
+  font-weight: 500;
+  transition: .25s;
+}
+
+.Playlist-save:hover {
+  background-color: rgba(108, 65, 233, .7);
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+@media only screen and (max-width: 1020px) {
+  .Playlist {
+    width: 90%;
+  }
+}
