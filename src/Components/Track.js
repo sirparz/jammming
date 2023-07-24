@@ -77,7 +77,7 @@ function Track(props) {
       
       <div className='album-det'>
         <div className='song-title'>
-          <p style={{fontWeight: 'bold'}}>{track.title ? track.title : 'Untitled'}</p>
+          <p style={{fontWeight: '600'}}>{track.title ? track.title : 'Untitled'}</p>
         </div>
         <div>
           <p style={{fontSize: '.75rem'}}><b>{artists}</b>{track.albumName  ? ' • ' + track.albumName : ''}</p>

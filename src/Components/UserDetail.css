@@ -1,0 +1,88 @@
+.User-detail {
+  padding-top: 3.6rem;
+  margin-bottom: 1rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 20rem;
+    padding: .5rem 0rem;
+    background-color: rgba(1, 12, 63, 0.7);
+    box-shadow: 0 4px 2px 2px #000000;
+  
+  margin: auto;
+  width: 16rem;
+  
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.User-detail button {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  width: 10rem;
+  padding: .77rem 0;
+  border-radius: 54px;
+  border-width: 0px;
+  background-color: #6c41ec;
+  text-align: center;
+  font-size: .83rem;
+  transition: background-color .25s;
+  color: #fff;
+  font-weight: 500;
+  transition: .25s;
+}
+
+.User-detail button:hover {
+  background-color: rgba(108, 65, 233, .7);
+}
+
+.User-image {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  border-radius: 50%;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: center;
+  order: 0;
+
+  margin: 0 .5rem;
+}
+
+.User-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+.User-name {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: center;
+  order: 0;
+  margin: 0 .3rem;
+}
+
+.User-detail p {
+  line-height: .1;
+  font-style: italic;
+  font-size: .7rem;
+}
+
+.User-detail h3 {
+  font-family: 'Poppins', sans-serif;
+  line-height: 0;
+}

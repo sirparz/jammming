@@ -1,10 +1,11 @@
 //import logo from './logo.svg';
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import './App.css';
 import SearchBar from './Components/SearchBar';
 import SearchResults from './Components/SearchResults';
 import Playlist from './Components/Playlist';
+import UserDetail from './Components/UserDetail';
 import Spotify from './util/Spotify'
 
 import {sampleResult} from './sample/sampleResult.js';
@@ -16,6 +17,7 @@ function App() {
   const [playlistName, setPlaylistName] = useState('New Playlist');
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [term, setTerm] = useState('');
+  const [user, setUser] = useState({});
 
   const handlePlaylistNameChange = (e) => {
     setPlaylistName(e.target.value);
@@ -36,18 +38,12 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(term);
     Spotify.search(term).then(setSearchResults);
   }, [term]);
 
   const handleTermChange = (e) => {
     setTerm(e.target.value);
-    console.log(term)
   };
-
-  const searchThatShit = () => { // not used
-    Spotify.search(term).then(setSearchResults);
-  }
 
   const savePlaylist = () => {
     const trackUris = playlistTracks.map((track) => track.uri);
@@ -57,7 +53,10 @@ function App() {
     });
   };
 
-
+  useEffect(() => {
+    Spotify.user().then(setUser);
+    console.log(user)
+  }, []);
   // Not authenticated yet
   /*
   const loginPage = (
@@ -70,9 +69,10 @@ function App() {
   const theRealDeal = (
     <>
       <header>
-        <h1>Jammming</h1>
+        <h1>Ja<span className="highlight">mmm</span>ing</h1>
       </header>
-
+      <UserDetail 
+        user={user} />
       <SearchBar 
         term={term}
         onSearch={handleTermChange} />

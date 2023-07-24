@@ -13,9 +13,7 @@ h1 {
   padding: .77rem 0;
   background-color: #010c3f;
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', ;
   font-size: 1.88rem;
   color: #fff;
 }
@@ -41,9 +39,7 @@ h2 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   color: #fff;
 }
