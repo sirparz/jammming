@@ -35,11 +35,8 @@ h2 {
 .App {
   height: 100%;
   padding: 0 17% 10% 17%;
-  background-color: #6c41ec;
-  background-image: url('./Components/image/background_photo_desktop.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: rgb(34,172,195);
+  background: linear-gradient(0deg, rgba(34,172,195,1) 0%, rgba(92,40,197,1) 44%, rgba(188,45,253,1) 100%);  background-repeat: no-repeat;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   color: #fff;
@@ -55,6 +52,21 @@ h2 {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+footer {
+  margin-top: 4rem;
+  padding: .5rem 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(102, 102, 102, 0.212);
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: auto;
+  bottom: 0px;
 }
 
 @media only screen and (max-width: 1020px) {

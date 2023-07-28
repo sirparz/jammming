@@ -57,6 +57,12 @@ function App() {
     Spotify.user().then(setUser);
     console.log(user)
   }, []);
+
+  // preserve playlist thingy on reset w/ local storage
+  /*useEffect(()=>{
+    localStorage.setItem('cart', cart)
+  },[cart]);*/
+
   // Not authenticated yet
   /*
   const loginPage = (
@@ -68,9 +74,6 @@ function App() {
   // The main stuff if it authenticates
   const theRealDeal = (
     <>
-      <header>
-        <h1>Ja<span className="highlight">mmm</span>ing</h1>
-      </header>
       <UserDetail 
         user={user} />
       <SearchBar 
@@ -94,7 +97,13 @@ function App() {
   
   return (
     <div className="App">
+      <header>
+        <h1>Ja<span className="highlight">mmm</span>ing</h1>
+      </header>
       {theRealDeal}
+      <footer>
+        A Codecademy Project Made By FS
+      </footer>
     </div>
   );
 }

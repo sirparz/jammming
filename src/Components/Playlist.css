@@ -23,7 +23,8 @@
   border-bottom: 1px solid #6f6f6f;
   font-family: 'Poppins', sans-serif;
   font-size: 1.55rem;
-  color: #ffffff; /*make it white afterward*/
+  color: #eedf12; /*make it white afterward*/
+  font-weight: bold;
 }
 
 
