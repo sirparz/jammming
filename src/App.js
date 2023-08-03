@@ -98,7 +98,8 @@ function App() {
       </header>
       {theRealDeal}
       <footer>
-        A Codecademy Project Made By FS
+        A Codecademy Project Made By SirParz
+        <p>If the search feature is not working, this is because this app is on Development Mode. Reach me out on Discord (@sirparz) to have your search result whitelisted.</p>
       </footer>
     </div>
   );

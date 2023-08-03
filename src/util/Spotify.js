@@ -1,5 +1,6 @@
 const clientId = 'd86f37024cc04f1cb4a645051c97379d'; // Insert client ID here.
 const redirectUri = 'https://jammming-mu.vercel.app'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
+//const redirectUri = 'http://localhost:3000'; 
 let accessToken;
 
 const Spotify = {
