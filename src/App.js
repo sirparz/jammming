@@ -19,6 +19,7 @@ function App() {
   const [term, setTerm] = useState('');
   const [user, setUser] = useState({});
 
+  // the handler and effects
   const handlePlaylistNameChange = (e) => {
     setPlaylistName(e.target.value);
   }
@@ -57,11 +58,6 @@ function App() {
     Spotify.user().then(setUser);
     console.log(user)
   }, []);
-
-  // preserve playlist thingy on reset w/ local storage
-  /*useEffect(()=>{
-    localStorage.setItem('cart', cart)
-  },[cart]);*/
 
   // Not authenticated yet
   /*
